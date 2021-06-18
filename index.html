@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <style>
+      iframe 
+      {
+      display: block; 
+      width: 100%;
+      height: 100%; 
+      border: none; 
+      overflow-y: auto; 
+      overflow-x: hidden;
+      }
+      html 
+      {
+      overflow: auto;
+      }
+      
+      html, body, div, iframe 
+      {
+      margin: 0px; 
+      padding: 0px; 
+      height: 100%; 
+      border: none;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
+    <iframe src="https://odysee.com" frameborder="0" marginheight="0" marginwidth="0" width="100%" height="100%" scrolling="auto">
   </body>
 </html>
